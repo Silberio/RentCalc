@@ -4,11 +4,14 @@ import view.UserInterface;
 
 public class Main {
 
+	private static UserInterface ui = new UserInterface();
+	private static Logic logic = Logic.getInstance();
+	
 	public static void main(String[] args) {
-
-		UserInterface ui = new UserInterface();
-		Logic logic = Logic.getInstance();
-		
+			application();			
+	}
+	
+	private static void application() {
 		ui.initHousehold();
 		logic.setRent(ui.requestTotalRent());
 		System.out.println("------o-------");
@@ -17,7 +20,6 @@ public class Main {
 		logic.setTotalIncome(ui.getHousehold());
 		System.out.println("------o-------");
 		logic.calculatePercentage(ui.getHousehold());
-	
 	}
 
 }

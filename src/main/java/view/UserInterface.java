@@ -50,6 +50,19 @@ public class UserInterface {
 		System.out.println("Input total rent: ");
 		return userInput.nextInt();
 	}
+	
+	public boolean runAgain() {
+		System.out.println("Run again? Y/N");
+		
+		String option = userInput.nextLine();
+		
+		if(option.equals("N") || option.equals("n") || option.equals("no") || option.equals("NO")) {
+			return false;
+		} else
+			return true;
+		
+		
+	}
 
 	public ArrayList<HouseholdMember> getHousehold() {
 		return household;
