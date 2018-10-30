@@ -1,0 +1,4 @@
+controller\Main.class
+model\HouseholdMember.class
+view\UserInterface.class
+controller\Logic.class
