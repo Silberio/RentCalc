@@ -19,6 +19,10 @@ public class Logic {
 	
 	private Logic() {}
 	
+	/**
+	 * adds the income of each member into a total sum
+	 * @param household
+	 */
 	public void setTotalIncome(ArrayList<HouseholdMember> household) {
 		for(HouseholdMember hm : household) {
 			totalIncome += hm.getIncome();
@@ -26,6 +30,10 @@ public class Logic {
 		System.out.println("Total income: " + totalIncome + "\n");
 	}
 	
+	/**
+	 * Logic for calculating percentage each member is to pay
+	 * @param household
+	 */
 	public void calculatePercentage(ArrayList<HouseholdMember> household) {
 		for(HouseholdMember hm : household) {
 			double percent = (hm.getIncome() * 100) / totalIncome;
@@ -37,6 +45,11 @@ public class Logic {
 		System.out.println();
 	}
 	
+	/**
+	 * Calculates how much money to be paid in accordance to percentage
+	 * @param p percent
+	 * @param income
+	 */
 	public void calculateMonetaryAmount(double p, double income) {
 		p /= 100;
 		double total = income * p;

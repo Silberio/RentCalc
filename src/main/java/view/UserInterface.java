@@ -36,7 +36,11 @@ public class UserInterface {
 		}
 	}
 
-	
+
+	/**
+	 * requests for the total amount of rent
+	 * @return
+	 */
 	public int requestTotalRent() {
 		System.out.println("Input total rent: ");
 		return userInput.nextInt();
