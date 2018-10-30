@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Household member object
+ * @author silberio_stalone
+ *
+ */
 public class HouseholdMember {
 	
 	private String name;

@@ -5,6 +5,11 @@ import java.util.Scanner;
 
 import model.HouseholdMember;
 
+/**
+ * Class containing all menu interactions and scanner for user input
+ * @author silberio_stalone
+ *
+ */
 public class UserInterface {
 	private Scanner userInput = new Scanner(System.in);
 	private ArrayList<HouseholdMember> household = new ArrayList<HouseholdMember>();

@@ -1,13 +1,20 @@
 package controller;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import model.HouseholdMember;
 
+/**
+ * Class containing all the logic for the program
+ * @author silberio_stalone
+ *
+ */
 public class Logic {
 
-	private int totalIncome, totalRent;
-	 
+	private double totalIncome, totalRent;
+	 private DecimalFormat percentFormat = new DecimalFormat("#.#");
+	 private DecimalFormat moneyFormat = new DecimalFormat("#.##");
 	//SINGLETON
 	private static final Logic logic = new Logic();
 	
@@ -27,7 +34,7 @@ public class Logic {
 		for(HouseholdMember hm : household) {
 			totalIncome += hm.getIncome();
 		}
-		System.out.println("Total income: " + totalIncome + "\n");
+		System.out.println("Total household income: " + totalIncome);
 	}
 	
 	/**
@@ -37,7 +44,7 @@ public class Logic {
 	public void calculatePercentage(ArrayList<HouseholdMember> household) {
 		for(HouseholdMember hm : household) {
 			double percent = (hm.getIncome() * 100) / totalIncome;
-			System.out.println(hm.getName() + ": "+ percent + "%");
+			System.out.print(hm.getName() + ": "+ percentFormat.format(percent) + "%");
 			
 			calculateMonetaryAmount(percent, hm.getIncome());
 		}
@@ -53,7 +60,8 @@ public class Logic {
 	public void calculateMonetaryAmount(double p, double income) {
 		p /= 100;
 		double total = income * p;
-		System.out.println(total);
+
+		System.out.println(" - SEK " + moneyFormat.format(total));
 	}
 	
 	public void setRent(int rent) {
