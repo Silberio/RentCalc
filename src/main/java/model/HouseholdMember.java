@@ -8,7 +8,7 @@ package model;
 public class HouseholdMember {
 	
 	private String name;
-	private int income;
+	private float income;
 	
 	public HouseholdMember() {}
 	
@@ -25,7 +25,7 @@ public class HouseholdMember {
 	 * @param name
 	 * @param income
 	 */
-	public HouseholdMember(String name, int income) {
+	public HouseholdMember(String name, float income) {
 		this.name = name;
 		this.income = income;
 	}
@@ -42,11 +42,11 @@ public class HouseholdMember {
 		this.name = name;
 	}
 
-	public int getIncome() {
+	public float getIncome() {
 		return income;
 	}
 
-	public void setIncome(int income) {
+	public void setIncome(float income) {
 		this.income = income;
 	}
 	

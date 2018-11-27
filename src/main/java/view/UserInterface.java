@@ -31,6 +31,13 @@ public class UserInterface {
 
 	}
 	
+	public void addHarcode() {
+		household.add(new HouseholdMember("Kristian", 21000));
+		household.add(new HouseholdMember("Erinn", 7500));
+		household.add(new HouseholdMember("Alex", 12000));
+		household.add(new HouseholdMember("Emil", 10000));
+	}
+	
 	/**
 	 * requests input for each household member
 	 */

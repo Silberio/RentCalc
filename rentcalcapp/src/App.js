@@ -106,7 +106,7 @@ class RoomieInput extends Component {
 								<label htmlFor={roomieId}> {`Roomie #${idx+1}`}</label>
 								<input type="text" name={roomieId} data-id={idx} id={roomieId} className="name"/>
 								<label htmlFor={incomeId}>Income</label>
-								<input type="text" name={ageId} data-id={idx} id={incomeId} className="income" />
+								<input type="text" name={incomeId} data-id={idx} id={incomeId} className="income" />
 							</div>
 						})
 					}
